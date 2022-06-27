@@ -40,3 +40,13 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v ~/dockervolumn/portainer:/data  portainer/portainer
 
 # 安装evernote，最好所有的笔记能放在一个地方，OneNote  有道云笔记，Evernote，现在就Evernotes，直接下载安装就行
+
+
+function installHomebrewM1()
+{
+    /bin/bash -c "$(curl -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/luzhangting/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+}
+
+
